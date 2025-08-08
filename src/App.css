@@ -122,3 +122,28 @@
 .cardo{
   font-family: "Cardo", cursive;
 }
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  background-color: #222;
+  color: white;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  padding: 0 10px;
+}
+
+.title-bar-buttons {
+  display: flex;
+  gap: 10px;
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-buttons button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

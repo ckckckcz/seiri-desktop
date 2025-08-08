@@ -68,10 +68,8 @@ export default function LoginPage() {
               <p className="text-gray-400 text-sm">Sign in to continue monitoring the cosmos</p>
             </motion.div>
 
-            {/* Login Form */}
             <motion.div
               className="space-y-6"
-              //   variants={itemVariants}
               onSubmit={handleSubmit}
             >
               {/* Username/Email Field */}
