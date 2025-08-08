@@ -6,46 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Aurora from "@/components/background/Aurora";
-import { Eye, EyeOff, Star, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const floatingVariants = {
-  animate: {
-    y: [-10, 10, -10],
-    rotate: [0, 5, -5, 0],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      ease: [0.42, 0, 0.58, 1], // Using cubic-bezier for easeInOut
-    },
-  },
-};
-
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -65,7 +28,7 @@ export default function LoginPage() {
 
       {/* Main Content */}
       <div className="flex items-center justify-center min-h-screen p-4 relative z-10">
-        <motion.div className="w-full max-w-md" variants={containerVariants} initial="hidden" animate="visible">
+        <motion.div className="w-full max-w-md" initial="hidden" animate="visible">
           {/* Logo */}
           {/* <motion.div 
             className="text-center mb-8"
@@ -101,7 +64,7 @@ export default function LoginPage() {
               className="text-center mb-8"
               //   variants={itemVariants}
             >
-              <h2 className="text-3xl font-bold text-white mb-1 leading-tight">Welcome to Seiri</h2>
+              <h2 className="text-3xl font-bold text-white mb-2 leading-tight">Welcome to Seiri</h2>
               <p className="text-gray-400 text-sm">Sign in to continue monitoring the cosmos</p>
             </motion.div>
 
